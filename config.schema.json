@@ -1,7 +1,8 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
+  "pluginAlias": "LedCat",
   "pluginType": "platform",
   "singular": true,
+  "headerDisplay": "<p><strong>Configure your Led Cat display.</strong></p>",
   "schema": {
     "type": "object",
     "properties": {
@@ -9,7 +10,20 @@
         "title": "Name",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "default": "Led Cat name"
+      },
+      "AuthKey": {
+        "title": "Auth Key",
+        "type": "string",
+        "required": true,
+        "x-schema-form": {
+          "type": "password"
+        }
+      },
+      "ledcatIP": {
+        "title": "Led Cat ip adress",
+        "type": "string",
+        "required": true
       }
     }
   }
